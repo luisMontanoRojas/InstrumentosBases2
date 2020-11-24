@@ -1,0 +1,65 @@
+{% extends "layout.html" %} {% block content %}
+
+<div class="jumbotron">
+    <h1 class="display-4">Hello, world!</h1>
+    <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident cumque quos laborum velit delectus quod iste quis illo mollitia eligendi temporibus nam pariatur aperiam minima beatae rerum non, sint possimus doloremque! Cupiditate explicabo officia
+        earum voluptatum optio dolorem nisi sequi est tempora autem maiores, at voluptas corrupti repellendus distinctio eum quia fuga hic cum quos facere magnam et iure animi. Quisquam, assumenda suscipit. Natus fugiat obcaecati maxime ullam a labore.</p>
+    <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut eligendi cupiditate, reiciendis harum consectetur saepe voluptatem minus ab labore totam libero repellat odit voluptas magni amet assumenda voluptatibus aliquid nesciunt vel nostrum suscipit
+        quisquam quibusdam illum. Quo maxime nemo inventore quam saepe, est optio corrupti, blanditiis ab asperiores reiciendis suscipit facilis? Maxime cumque atque cum, quidem quae adipisci obcaecati quo sapiente rem. Dolores excepturi placeat repellendus,
+        molestiae doloribus omnis aliquid nemo quia, porro provident sit earum fuga molestias delectus recusandae quasi praesentium eos id? Quidem, animi, repellat ipsa quae sequi ipsum quisquam corrupti libero illum optio, nemo sit eum aliquid.</p>
+    <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis voluptas doloremque vitae repellat! Corporis illum assumenda et, nam non nisi sit. Sit minima enim excepturi quas nisi voluptas non repellendus eum laboriosam cumque? Eos repellendus
+        tempore cum, adipisci odit ullam consectetur, nam saepe, enim vel aliquam corporis culpa officiis veniam asperiores molestias placeat quis tempora ea maxime inventore? Tempora architecto itaque ducimus? Saepe minus ipsa esse? Porro vero atque
+        blanditiis.
+    </p>
+
+    <h1 class="display-4">Productos:</h1>
+    <br>
+    <!-- Search form -->
+    <div class="md-form mt-0">
+        <input class="form-control" type="text" placeholder="Search" aria-label="Search">
+    </div>
+    <br>
+    <ul class="nav nav-pills">
+        <li class="nav-item">
+            <a class="nav-link active" href="/">Todos</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/pianos">Pianos</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/guitarras">Guitarras</a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link" href="/baterias">Baterias</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/flautas">Flautas</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/violines">Violines</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/mas_vistos">Mas Visitados</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/mas_vendidos">Mas Vendidos</a>
+        </li>
+    </ul>
+    <br>
+    <div class="card-columns">
+        {% for product in products %}
+        <div class="card text-center border-info" style="height:580px;">
+            <img class="card-img-top" src="{{product['imageurl1']}}" alt="Card image cap" style="width:300px;height:300px;">
+            <div class="card-body">
+                <h5 class="card-title">{{product['nombre']}}</h5>
+                <p class="card-text">{{product['descripcion']}}</p>
+                <a href="#" class="btn btn-primary">Comprar</a>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+</div>
+
+{% endblock %}
