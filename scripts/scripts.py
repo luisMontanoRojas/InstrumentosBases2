@@ -37,7 +37,7 @@ collectionProducts.insert_many([
     "cantidad" : 20,
     "imageurl1" : "https://multisononline.com/80563-thickbox_default/fender-vintera-road-worn-60s-stratocaster-pf-lpb.jpg",
     "imageurl2" : "https://multisononline.com/80562-thickbox_default/fender-vintera-road-worn-60s-stratocaster-pf-lpb.jpg",
-    "categoria" : "Guitarra Eléctrica",
+    "categoria" : "Guitarra Electrica",
     "vistas" : 100,
     "cantidad_vendidas" : 15 
 },
@@ -48,7 +48,7 @@ collectionProducts.insert_many([
     "cantidad" : 20,
     "imageurl1" : "https://multisononline.com/80567-thickbox_default/fender-vintera-road-worn-60s-stratocaster-pf-fmg.jpg",
     "imageurl2" : "https://multisononline.com/80566-thickbox_default/fender-vintera-road-worn-60s-stratocaster-pf-fmg.jpg",
-    "categoria" : "Guitarra Eléctrica",
+    "categoria" : "Guitarra Electrica",
     "vistas" : 100,
     "cantidad_vendidas" : 15  
 },
@@ -59,7 +59,7 @@ collectionProducts.insert_many([
     "cantidad" : 20,
     "imageurl1" : "https://multisononline.com/46000-thickbox_default/pearl-exl725s-export-lacquer-rock-cherry-22.jpg",
     "imageurl2" : "https://multisononline.com/46001-thickbox_default/pearl-exl725s-export-lacquer-rock-cherry-22.jpg",
-    "categoria" : "Batería Completa",
+    "categoria" : "Bateria Completa",
     "vistas" : 100,
     "cantidad_vendidas" : 15
 },
@@ -70,7 +70,7 @@ collectionProducts.insert_many([
     "cantidad" : 20,
     "imageurl1" : "https://multisononline.com/62783-thickbox_default/yamaha-rydeen-rdp0f5-silver-glitter.jpg",
     "imageurl2" : "https://multisononline.com/62784-thickbox_default/yamaha-rydeen-rdp0f5-silver-glitter.jpg",
-    "categoria" : "Batería Completa",
+    "categoria" : "Bateria Completa",
     "vistas" : 100,
     "cantidad_vendidas" : 15
 },
@@ -81,7 +81,7 @@ collectionProducts.insert_many([
     "cantidad" : 20,
     "imageurl1" : "https://multisononline.com/51056-thickbox_default/yamaha-yfl262.jpg",
     "imageurl2" : "https://multisononline.com/54806-thickbox_default/yamaha-yfl262.jpg",
-    "categoria" : "Flauta Travesera",
+    "categoria" : "Flauta",
     "vistas" : 100,
     "cantidad_vendidas" : 15
 },
@@ -92,7 +92,7 @@ collectionProducts.insert_many([
     "cantidad" : 20,
     "imageurl1" : "https://multisononline.com/501-thickbox_default/jmichael-flu450s.jpg",
     "imageurl2" : "https://multisononline.com/15700-thickbox_default/jmichael-flu450s.jpg",
-    "categoria" : "Flauta Travesera",
+    "categoria" : "Flauta",
     "vistas" : 100,
     "cantidad_vendidas" : 15
 },
