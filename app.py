@@ -66,16 +66,19 @@ def vaciarCarrito():
 
 @app.route('/Compra')
 def venta():
-    #idVenta= + 1
+    idVenta= + 1
     #producto2=list(carrito.find())
     ventas.insert([
     {
-     "idVenta" :1,
+     "idVenta" :idVenta,
      "listaProductos": [list(carrito.find())]
     }])
-    #ventas.update({"id":idVenta}, {"$addToSet":{"listaProductos":producto2}})
+    
+    venta_1=ventas.find()
+    carrito.aggregate([{"$group":{"_id":None, "totalPagar":{"$sum":"$precio"}}}])
     products_l=carrito.find()
-    return render_template('venta.html', idVenta=1,products=products_l)
+    carrito_1=carrito.find()
+    return render_template('venta.html', ventas=venta_1,products=products_l,carritos=carrito_1)
 
 
 if __name__ == '__main__':
