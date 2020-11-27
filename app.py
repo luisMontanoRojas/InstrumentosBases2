@@ -6,6 +6,7 @@ app = Flask(__name__)
 client = MongoClient("mongodb://localhost:27017/")
 db = client.musicalInstrumentsShop
 products = db.products
+carrito=[]
 
 @app.route('/')
 def listaTodos():
@@ -42,6 +43,14 @@ def listaViolines():
 @app.route('/contact')
 def about():
     return render_template('contact.html')
+
+@app.route('/AddCarrito',methods=['POST'])
+def addCarrito():
+    name =request.values.get("name")
+    carrito.append(products.find({"name":name}))
+    products_l = products.find()
+    print (name)
+    return render_template('home.html', products=products_l)
 
 if __name__ == '__main__':
     app.run(debug=True)
