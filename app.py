@@ -57,5 +57,10 @@ def listarTodoCarrito():
     products_l = carrito.find()
     return render_template('carrito.html', products=products_l)
 
+@app.route('/vaciarCarrito')
+def vaciarCarrito():
+    carrito.remove()
+    return listaTodos()
+
 if __name__ == '__main__':
     app.run(debug=True)
