@@ -36,6 +36,9 @@
         <li class="nav-item">
             <a class="nav-link" href="/mas_vendidos">Mas Vendidos</a>
         </li>
+        <li>
+            <a class="btn btn-warning" href="/vaciarCarrito">VaciarCarrito</a> 
+        </li>
     </ul>
     <br>
     <div class="card-columns">
@@ -48,9 +51,9 @@
                 <p class="card-text">{{product['cantidad']}} unidades</p>
                 <form action="/AddCarrito" method="POST">
                     <input type="text" name="nombre" value="{{ product['nombre'] }}" hidden>
-                    <button class="btn btn-danger" type="submit">Agregar al Carrito</button>
+                    <button class="btn btn-primary" type="submit">Agregar al Carrito</button>
                 </form>
-                <a class="btn btn-primary" href="/vaciarCarrito">VaciarCarrito</a>        
+                       
               
                
             </div>

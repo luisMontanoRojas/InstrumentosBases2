@@ -7,6 +7,8 @@ client = MongoClient("mongodb://localhost:27017/")
 db = client.musicalInstrumentsShop
 products = db.products
 carrito=db.carrito
+ventas=db.ventas
+idVenta=0
 
 @app.route('/')
 def listaTodos():
@@ -61,6 +63,20 @@ def listarTodoCarrito():
 def vaciarCarrito():
     carrito.remove()
     return listaTodos()
+
+@app.route('/Compra')
+def venta():
+    #idVenta= + 1
+    #producto2=list(carrito.find())
+    ventas.insert([
+    {
+     "idVenta" :1,
+     "listaProductos": [list(carrito.find())]
+    }])
+    #ventas.update({"id":idVenta}, {"$addToSet":{"listaProductos":producto2}})
+    products_l=carrito.find()
+    return render_template('venta.html', idVenta=1,products=products_l)
+
 
 if __name__ == '__main__':
     app.run(debug=True)
