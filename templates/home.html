@@ -48,7 +48,7 @@
             <div class="card-body">
                 <h5 class="card-title">{{product['nombre']}}</h5>
                 <p class="card-text">{{product['descripcion']}}</p>
-                <p class="card-text">{{product['cantidad']}} unidades</p>
+                <p class="card-text">unidades:{{product['cantidad']}} </p>
                 <form action="/AddCarrito" method="POST">
                     <input type="text" name="nombre" value="{{ product['nombre'] }}" hidden>
                     <button class="btn btn-primary" type="submit">Agregar al Carrito</button>

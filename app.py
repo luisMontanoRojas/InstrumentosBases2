@@ -73,12 +73,14 @@ def venta():
      "idVenta" :idVenta,
      "listaProductos": [list(carrito.find())]
     }])
-    
-    venta_1=ventas.find()
-    carrito.aggregate([{"$group":{"_id":None, "totalPagar":{"$sum":"$precio"}}}])
+
+    instrumentos=carrito.find()
+    totalPagar = 0
+    for i in instrumentos:
+        totalPagar = totalPagar + i["precio"]
+    print (totalPagar)
     products_l=carrito.find()
-    carrito_1=carrito.find()
-    return render_template('venta.html', ventas=venta_1,products=products_l,carritos=carrito_1)
+    return render_template('venta.html', ventas=totalPagar,products=products_l)
 
 
 if __name__ == '__main__':
