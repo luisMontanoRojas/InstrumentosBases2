@@ -82,6 +82,24 @@ def venta():
     products_l=carrito.find()
     return render_template('venta.html', ventas=totalPagar,products=products_l)
 
+@app.route("/search", methods=["GET"])
+def search():
+    key=request.values.get("key")
+    products_l=products.find({"nombre":(key)})
+    return render_template('home.html',products=products_l)
+
+@app.route('/mas_vistos')
+def listaMasVistos():
+    products_l = products.find()
+    products_lO = sorted(products_l, key=lambda product: product['vistas'], reverse=True)
+    return render_template('home.html', products=products_lO)
+
+@app.route('/mas_vendidos')
+def listaMasVendidos():
+    products_l = products.find()
+    products_lO = sorted(products_l, key=lambda product: product['cantidad_vendidas'], reverse=True)
+    return render_template('home.html', products=products_lO)
+
 
 if __name__ == '__main__':
     app.run(debug=True)
